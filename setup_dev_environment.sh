@@ -26,7 +26,7 @@ chsh -s $(which zsh)  # changing default shell
 mkdir -p ~/bin &&
 curl -o ~/bin/tldr https://raw.githubusercontent.com/raylee/tldr/master/tldr  # installing tldr
 chmod +x ~/bin/tldr
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"  # installing ohmyzsh, no need to set as zsh as default as it has been already set
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended # installing ohmyzsh, no need to set as zsh as default as it has been already set
 zsh
 sed -i '2 s/^# //' ~/.zshrc  # uncomment 2nd line
 printf 'x="exit"\nc="clear"\nv="vim"\npdf="pdflatex -interaction=nonstopmode"\nlpdf="lualatex -interaction=nonstopmode"\nxpdf="xelatex -interaction=nonstopmode"\n' >> ~/.zshrc
