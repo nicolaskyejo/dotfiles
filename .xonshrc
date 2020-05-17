@@ -1,0 +1,17 @@
+
+# Mac specific
+source-bash --seterrprevcmd "" /etc/profile
+$PATH.append("/Users/nicolaskyejo/bin")
+
+source-bash ~/.bash_profile
+
+# Aliases
+aliases['ll'] = 'ls -alh'
+aliases['g'] = 'git'
+aliases['s'] = 'git status'
+aliases['c'] = 'clear'
+aliases['vi'] = 'vim'
+aliases['mkdir'] = 'mkdir -p'
+
+
+$XONSH_SHOW_TRACEBACK=True

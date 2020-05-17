@@ -1,0 +1,202 @@
+/*
+Windows %APPDATA%\Code\User\settings.json
+macOS $HOME/Library/Application Support/Code/User/settings.json
+Linux $HOME/.config/Code/User/settings.json
+*/
+{
+    "editor.fontSize": 18,
+    "files.autoSave": "afterDelay",
+    "editor.minimap.enabled": false,
+    "editor.rulers": [
+        79,
+        120
+    ],
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [";"],
+            "after": [":"]
+        }
+    ],
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["i", "i"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "go.useLanguageServer": true,
+    "terraform.languageServer": {
+    "enabled": true
+    },
+    "terraform.indexing": {
+        "enabled": false
+    },
+    "files.encoding": "utf8",
+    "cSpell.enableFiletypes": [
+        "!c",
+        "!cpp",
+        "!csharp",
+        "!css",
+        "!git-commit",
+        "!go",
+        "!handlebars",
+        "!haskell",
+        "!html",
+        "!jade",
+        "!java",
+        "!javascript",
+        "!javascriptreact",
+        "!json",
+        "!jsonc",
+        "!latex",
+        "!less",
+        "!php",
+        "!pug",
+        "!python",
+        "!rust",
+        "!scala",
+        "!scss",
+        "!typescript",
+        "!typescriptreact",
+        "!yaml",
+        "!yml"
+    ],
+    "cSpell.userWords": [
+        "systemctl"
+    ],
+    "workbench.colorTheme": "Visual Studio Dark",
+    "explorer.confirmDelete": false,
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    "latex-workshop.latex.recipes": [
+
+        {
+            "name": "latexmk 🔃",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "latexmk (latexmkrc)",
+            "tools": [
+                "latexmk_rconly"
+            ]
+        },
+        {
+            "name": "lualatex",
+            "tools": [
+                "lua"
+            ]
+        },
+        {
+            "name": "lualatex ➞ bibtex",
+            "tools": [
+                "lua",
+                "bibtex",
+                "bibtex"
+            ]
+        },
+        {
+            "name": "latexmk (lualatex)",
+            "tools": [
+                "lualatexmk"
+            ]
+        },
+        {
+            "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "Compile Rnw files",
+            "tools": [
+                "rnw2tex",
+                "latexmk"
+            ]
+        }
+    ],
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "latex-workshop.latex.tools": [
+
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "lualatexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-lualatex",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "lua",
+            "command": "lualatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                // "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "latexmk_rconly",
+            "command": "latexmk",
+            "args": [
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "rnw2tex",
+            "command": "Rscript",
+            "args": [
+                "-e",
+                "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
+            ],
+            "env": {}
+        }
+    ],
+    "latex-workshop.latex.watch.delay": 15000
+}
