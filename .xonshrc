@@ -10,8 +10,9 @@ aliases['ll'] = 'ls -alh'
 aliases['g'] = 'git'
 aliases['s'] = 'git status'
 aliases['c'] = 'clear'
-aliases['vi'] = 'vim'
+aliases['v'] = 'vim'
 aliases['mkdir'] = 'mkdir -p'
+aliases['r'] = 'git rebase -i HEAD~2'
 
 
 $XONSH_SHOW_TRACEBACK=True
