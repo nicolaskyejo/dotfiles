@@ -6,13 +6,22 @@ $PATH.append("/Users/nicolaskyejo/bin")
 source-bash ~/.bash_profile
 
 # Aliases
-aliases['ll'] = 'ls -alh'
 aliases['g'] = 'git'
 aliases['s'] = 'git status'
+aliases['r'] = 'git rebase -i HEAD~2'
+aliases['flog'] = 'git log --follow -p -- '
+aliases['slog'] = 'git log --pretty=oneline'
+aliases['clean'] = 'git clean -xfd' # leaves files ignored by git
+aliases['branch'] = 'git branch --sort=-committerdate'
+aliases['main'] = 'git checkout master'
+aliases['rm-branches'] = '$[git branch | grep -v "master" | xargs git branch -D]'
+
 aliases['c'] = 'clear'
 aliases['v'] = 'vim'
 aliases['mkdir'] = 'mkdir -p'
-aliases['r'] = 'git rebase -i HEAD~2'
 
+aliases['k'] = 'kubectl'
+aliases['d'] = 'docker'
+aliases['dk'] = 'docker-compose'
 
 $XONSH_SHOW_TRACEBACK=True

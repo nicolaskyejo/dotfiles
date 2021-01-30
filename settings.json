@@ -5,35 +5,33 @@ Linux $HOME/.config/Code/User/settings.json
 */
 {
     "editor.fontSize": 18,
+    "files.encoding": "utf8",
     "files.autoSave": "afterDelay",
+    "explorer.confirmDelete": false,
     "editor.minimap.enabled": false,
+    "workbench.editor.enablePreview": false,
     "editor.rulers": [
         79,
         120
     ],
+
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.enabled": true,
-    "vim.normalModeKeyBindings": [
-        {
-            "before": [";"],
-            "after": [":"]
-        }
-    ],
-    "vim.insertModeKeyBindings": [
-        {
-            "before": ["i", "i"],
-            "after": ["<Esc>"]
-        }
-    ],
+
+    
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "home/nicolas/.vimrc",
+
     "go.useLanguageServer": true,
+
     "terraform.languageServer": {
     "enabled": true
     },
     "terraform.indexing": {
         "enabled": false
     },
-    "files.encoding": "utf8",
+
     "cSpell.enableFiletypes": [
         "!c",
         "!cpp",
@@ -66,8 +64,7 @@ Linux $HOME/.config/Code/User/settings.json
     "cSpell.userWords": [
         "systemctl"
     ],
-    "workbench.colorTheme": "Visual Studio Dark",
-    "explorer.confirmDelete": false,
+    
     "latex-workshop.latex.recipe.default": "lastUsed",
     "latex-workshop.latex.recipes": [
 
