@@ -1,18 +1,18 @@
+" Remaps
 nore ; :
 imap ii <Esc>
+:nnoremap q <c-v>
+
+"" Scrolling
+nnoremap <Space> <PageDown>
+nnoremap u <PageUp>
 
 set number
 set ignorecase
 set smartcase
-
-set tabstop=4
-set shiftwidth=4 "Indentation
-set softtabstop=4
-set expandtab	 "insert spaces when using Tab
-
-" Scrolling
-nnoremap <Space> <PageDown>
-nnoremap u <PageUp>
+set encoding=utf-8
+set fileformat=unix
+set fileformats=unix,dos
 
 " Undo & Redo
 nnoremap <C-Z> u
